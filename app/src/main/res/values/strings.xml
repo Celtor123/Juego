@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Reto</string>
+    <string name="internet">INTERNET</string>
+    <string name="imagen">IMAGEN</string>
+    <string name="otro">OTRO</string>
+    <string name="mate">MATE</string>
+</resources>
