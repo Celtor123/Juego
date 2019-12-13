@@ -4,4 +4,9 @@
     <string name="imagen">IMAGEN</string>
     <string name="otro">OTRO</string>
     <string name="mate">MATE</string>
+    <string name="web">Web</string>
+    <string name="suma">+</string>
+    <string name="resta">-</string>
+    <string name="multiplicacion">x</string>
+    <string name="division">/</string>
 </resources>
