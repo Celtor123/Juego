@@ -59,6 +59,9 @@ class MainActivity : AppCompatActivity() {
         //método de mi reto
         otro?.setOnClickListener {
             Log.d("Bton sel","Otro")
+            otro!!.setBackgroundColor(Color.BLUE)
+            val intento3 = Intent(this, OtraActivity::class.java)
+            startActivity(intento3)
 
         }
 
@@ -66,8 +69,8 @@ class MainActivity : AppCompatActivity() {
         imagen?.setOnClickListener { v ->
             Log.d("Bton sel","Imagen")
                 imagen!!.setBackgroundColor(Color.BLUE)
-            val intent = Intent(this, CamaraActivity::class.java)
-            startActivity(intent)
+            val intento4 = Intent(this, CamaraActivity::class.java)
+            startActivity(intento4)
         }
 
     }
