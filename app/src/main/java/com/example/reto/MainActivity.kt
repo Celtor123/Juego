@@ -5,6 +5,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import org.jetbrains.anko.toast
 
@@ -34,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         otro= findViewById(R.id.btnotr)
         mate= findViewById(R.id.btnmte)
         imagen= findViewById(R.id.btmima)
+
+        //método del reto internet
         internet?.setOnClickListener{
             Log.d("Bton sel","Internet")
             val intento= Intent(this,InterActivity::class.java)
@@ -42,6 +45,8 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intento)
         }
+
+        //método del reto internet
         mate?.setOnClickListener {
             Log.d("Bton sel","Matemáticas")
             val intento2= Intent(this,MateActivity::class.java)
@@ -50,13 +55,21 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intento2)
         }
+
+        //método de mi reto
         otro?.setOnClickListener {
             Log.d("Bton sel","Otro")
 
         }
-        imagen?.setOnClickListener {
-            Log.d("Bton sel","Imagen")
 
+        //método del reto Imagen
+        imagen?.setOnClickListener { v ->
+            Log.d("Bton sel","Imagen")
+                imagen!!.setBackgroundColor(Color.BLUE)
+            val intent = Intent(this, CamaraActivity::class.java)
+            startActivity(intent)
         }
+
     }
+
 }

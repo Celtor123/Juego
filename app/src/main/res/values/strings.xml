@@ -9,4 +9,7 @@
     <string name="resta">-</string>
     <string name="multiplicacion">x</string>
     <string name="division">/</string>
+    <string name="clickea">clickea</string>
+    <string name="todo">TODO</string>
+    <string name="image">image</string>
 </resources>

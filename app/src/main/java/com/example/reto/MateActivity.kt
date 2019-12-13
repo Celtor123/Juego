@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 
 class MateActivity : AppCompatActivity() {
+    //creamos variables
     private var sal: TextView? = null
     private var e1: EditText? = null
     private var e2: EditText? = null
@@ -15,6 +16,8 @@ class MateActivity : AppCompatActivity() {
     private var resta: Button? = null
     private var multi: Button? = null
     private var division: Button? = null
+    /*crea método que ejecuta la aplicacion del activity secundario
+    e inicializamos la variables*/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mate)
@@ -27,12 +30,14 @@ class MateActivity : AppCompatActivity() {
         division = findViewById(R.id.botondiv)
     }
 
+    //Ejecuta este método cada vez que se inicializa la activity
     override fun onStart() {
         super.onStart()
         Log.d("MAteActivity", "Iniciado")
 
 
-
+        /*métodos en el que al activar el boton correspondiente, recojen los valores
+        ingresados en los edittext y hacen el correspondiente cálculo */
         division?.setOnClickListener {
             val n1 = Integer.parseInt(e1?.text.toString())
 
@@ -46,29 +51,32 @@ class MateActivity : AppCompatActivity() {
                 sal?.setText(div.toString())
             }
             if(n1==n2){
-                val div=0
+                val div=1
                 sal?.setText(div.toString())
             }
         }
+
         multi?.setOnClickListener {
             val n1 = Integer.parseInt(e1?.text.toString())
 
             val n2 = Integer.parseInt(e2?.text.toString())
-            if(n1>n2){
+
                 val resul=n1*n2
                 sal?.setText(resul.toString())
-            }
+
 
         }
+
         suma?.setOnClickListener {
             val n1 = Integer.parseInt(e1?.text.toString())
 
             val n2 = Integer.parseInt(e2?.text.toString())
-            if(n1>n2) {
+
                 val suma = n1 + n2
                 sal?.setText(suma.toString())
-            }
+
         }
+
         resta?.setOnClickListener {
             val n1 = Integer.parseInt(e1?.text.toString())
 
